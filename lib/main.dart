@@ -7,7 +7,10 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(title: "Scaffold Test", home: new HomePage());
+    return new MaterialApp(title: "Scaffold Test", home: new HomePage(),
+    theme: new ThemeData.dark(
+       
+    ),);
   }
 }
 
@@ -47,8 +50,9 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             new Text(bleh),
             new RaisedButton(
-              child: new Text("Loves"),
+              child: new Text("Loves", style: new TextStyle(color: Colors.white),),
               onPressed: _blah,
+              color: Colors.lightBlueAccent,
             )
           ],
         ),
