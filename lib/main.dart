@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(title: "Scaffold Test", home: new HomePage(),
     theme: new ThemeData.dark(
-       
+
     ),);
   }
 }
@@ -38,7 +38,11 @@ class _HomePageState extends State<HomePage> {
         appBar: new AppBar(
           title: new Text("HomePage"),
         ),
-        body: _bodyWidget());
+        body: _bodyWidget(),
+        floatingActionButton: new FloatingActionButton(
+        child: new Icon(Icons.play_arrow),
+        onPressed: _blah,),
+    );
   }
 
   Widget _bodyWidget() {
